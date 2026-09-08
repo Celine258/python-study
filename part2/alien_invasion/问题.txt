@@ -1,0 +1,4 @@
+1.当包要安装到全局python时，使用python pip install 包名，
+如果是python -m pip install 包名  是安装到conda环境中的
+
+
