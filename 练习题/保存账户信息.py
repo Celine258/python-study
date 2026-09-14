@@ -1,13 +1,13 @@
 from 银行账户 import Bank
 import json
 class SavePersonalInfo(Bank):
-    def __init__(self, name, count, password, phone):
-        super().__init__(name, count, password, phone)
+    def __init__(self, name, acount, password, phone):
+        super().__init__(name, acount, password, phone)
 
     def save(self):
         data = {
             "name": self.name,
-            "count": self.count,
+            "count": self.acount,
             "password": self.password,
             "phone": self.phone
         }
