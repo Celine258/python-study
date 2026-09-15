@@ -1,0 +1,11 @@
+{
+    "name": "Celine",
+    "email": [
+        "celine@example.com",
+        "support@test.org"
+    ],
+    "order": [
+        "ORD-20260915-001",
+        "ORD-20260915-002"
+    ]
+}

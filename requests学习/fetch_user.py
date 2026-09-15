@@ -26,9 +26,9 @@ def fetch_user(username):
         return None
 
 
-def save_info(data):
+def save_info(data, output_path):
     try:
-        with open(arg.output, "w", encoding='utf-8') as f:
+        with open(output_path, "w", encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
             logging.info("存入信息成功")
             print("success")
@@ -47,9 +47,7 @@ if __name__ == "__main__":
 
     data = fetch_user(arg.username)
     if data is not None:
-        save_info(data)
-        with open(arg.output, "r", encoding="utf-8") as f:
-            data = json.load(f)
+        save_info(data, arg.output)
         print(data["login"])
         print(data["public_repos"])  # 公开仓库数量
         print(data["html_url"])      # GitHub 主页
