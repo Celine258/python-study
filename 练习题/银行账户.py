@@ -45,7 +45,7 @@ class Bank:
                 num = float(input("请输入你要存的金额:\n"))
             except ValueError:
                 print("请输入数字")
-                logging.error("为输入正确数字")
+                logging.error("请输入正确数字")
                 continue
             if num >= 0.00:
                 self.money += num
@@ -97,6 +97,7 @@ class Bank:
             except OSError:
                 logging.exception("账户数据保存失败")
                 print("数据保存失败，请检查日志")
+                raise
             else:
                 logging.info("数据保存成功")
 
@@ -115,3 +116,4 @@ class Bank:
             except FileNotFoundError:
                 logging.error("未找到账户")
                 print("未找到该文件，请先创建账户。")
+                raise
