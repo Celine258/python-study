@@ -3,8 +3,7 @@ put = requests.put(
     "http://127.0.0.1:8000/students/1",
     json={
         "name": "CelineDa",
-        "age":19,
-        "major": "None"
+        "age":19
     }
 )
 
