@@ -1,0 +1,10 @@
+# 本阶段（阶段 1：模型调用）需要的依赖
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+httpx
+pytest
+# 真正调用模型时还要装（下一课再解注释）：
+# openai
